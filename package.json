@@ -1,0 +1,24 @@
+{
+  "name": "@rom-dos/timestamp",
+  "version": "1.0.0",
+  "description": "Returns a local (or UTC) timestamp in YYYYMMDD-HH-MM-SS format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rom-dos/timeStamp.git"
+  },
+  "keywords": [
+    "time",
+    "date",
+    "timestamp"
+  ],
+  "author": "rom-dos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rom-dos/timeStamp/issues"
+  },
+  "homepage": "https://github.com/rom-dos/timeStamp#readme"
+}
