@@ -1,4 +1,4 @@
-// Returns a local timestamp in YYYYMMDD-HH-MM-SS format
+// Returns a local (or UTC) timestamp in YYYYMMDD-HH-MM-SS format
 
 const timeStamp = () => {
   const now = new Date()
@@ -11,6 +11,18 @@ const timeStamp = () => {
   return `${year}${month}${date}-${hours}-${minutes}-${seconds}`
 }
 
+const timeStampUTC = () => {
+  const now = new Date()
+  const year = now.getUTCFullYear()
+  const month = (now.getUTCMonth() + 1) < 10 ? '0' + (now.getUTCMonth() + 1) : now.getUTCMonth() + 1
+  const date = now.getUTCDate() < 10 ? '0' + now.getUTCDate() : now.getUTCDate()
+  const hours = now.getUTCHours() < 10 ? '0' + now.getUTCHours() : now.getUTCHours()
+  const minutes = now.getUTCMinutes() < 10 ? '0' + now.getUTCMinutes() : now.getUTCMinutes()
+  const seconds = now.getUTCSeconds() < 10 ? '0' + now.getUTCSeconds() : now.getUTCSeconds()
+  return `${year}${month}${date}-${hours}-${minutes}-${seconds}`
+}
+
 module.exports = {
-  timeStamp
+  timeStamp,
+  timeStampUTC
 }
